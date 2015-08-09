@@ -19,6 +19,7 @@ session = DBSession()
 def main():
     return render_template('main_page.html')
 
+@app.route('/countries')
 def disp_countries():
     allCountries = session.query(Place).all()
     return render_template('list_of_countries.html', countries=allCountries)
