@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;">
+<h1> Countries: </h1>
+{% for country in countries %}
+<h2><a href="{{url_for('show_country', countryId=country.id)}}">{{country.country}}</a></h2>
+{% endfor %}
+</body>
+</html>

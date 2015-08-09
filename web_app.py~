@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 # SQLAlchemy stuff
@@ -19,9 +19,37 @@ session = DBSession()
 def main():
     return render_template('main_page.html')
 
+@app.route('/countries')
 def disp_countries():
     allCountries = session.query(Place).all()
     return render_template('list_of_countries.html', countries=allCountries)
+
+@app.route('/show_country/<countryId>')
+def show_country(countryId):
+    allStories = session.query(Story).filter_by(placeId=countryId).all()
+    return render_template('display_country.html', stories=allStories, countryId=countryId)
+
+@app.route('/addc', methods=['GET', 'POST'])
+def add_country():
+    if (request.method == 'GET'):
+	return render_template('add_country.html')
+    else:
+	newCountry = request.form['country']
+	newplace = Place(country=newCountry)
+	session.add(newplace)
+	session.commit()
+	return redirect(url_for('disp_countries'))
+
+@app.route('/adds/<placeId>', methods=['GET', 'POST'])
+def add_story(placeId):
+    if (request.method == 'GET'):
+	return render_template('add_story.html')
+    else:
+	newpicture = request.form['story']
+	newstory = Story(placeId=placeId, picture=newpicture)
+	session.add(newstory)
+	session.commit()
+	return redirect(url_for('show_country', countryId=placeId))
 
 if __name__ == '__main__':
     app.run(debug=True)
