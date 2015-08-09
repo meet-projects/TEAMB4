@@ -5,6 +5,7 @@
     Title for this Page Goes Here
   </title>
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
   
 <h1>Our MEET Y2 project</h1>
   
@@ -12,7 +13,19 @@
 
 <body>
 
+##<img src="unknown" alt="front page image (make in photoshop)">
 
+<p> insert UVP here </p>
+
+<a href="{{url_for('broken-link')}}">Click here to view list of countries</a>
+
+<table border='10'>
+{{% for x in countries: %}}
+<tr>
+<td> {{ x.country }} </td>
+</tr>
+{{% endfor %}}
+</table>
 </body>
 
 
