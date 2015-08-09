@@ -5,5 +5,23 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-#PLACE YOUR TABLE SETUP INFORMATION HERE
+class Place(Base): 
+    __tablename__ = 'place' 
+    id = Column(Integer, primary_key=True) 
+    country = Column(String) 
+    nameId = Column(Integer)
 
+class Person(Base):
+    __tablename__ = 'person' 
+    id = Column(Integer, primary_key=True) 
+    name = Column(String) 
+    nationality = Column(String) 
+    gender = Column(String) 
+    hometown = Column(String)
+    
+class Story(Base):
+    __tablename__ = 'story' 
+    id = Column(Integer, primary_key=True) 
+    placeId = Column(Integer) 
+    personId = Column(Integer) 
+    picture = Column(String)
