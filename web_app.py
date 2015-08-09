@@ -31,7 +31,7 @@ class Person(Base):
     hometown = Column(String)
     
 class Story(Base):
-    __tablename__ = 'person' 
+    __tablename__ = 'story' 
     id = Column(Integer, primary_key=True) 
     placeId = Column(Integer) 
     personId = Column(Integer) 
