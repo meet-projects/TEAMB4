@@ -17,7 +17,7 @@
 
 <p> insert UVP here </p>
 
-<a href="{{url_for('disp_countries')}}">See Countries</a>
+<a href="{{url_for('disp_countries')}}"></a>
 </body>
 
 
