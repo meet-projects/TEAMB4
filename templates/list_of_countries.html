@@ -9,7 +9,7 @@
 <body style="text-align:center;">
 <h1> Countries: </h1>
 {% for country in countries %}
-<a href="{{url_for('show_country', countryId=country.id)}}">{{country.country}}</a>
+<a href="{{url_for('show_country', countryId=country.id)}}">{{country.country}}</a><br><br>
 {% endfor %}
 <br><br>
 <form action="{{url_for('add_country')}}">
