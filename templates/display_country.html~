@@ -8,8 +8,9 @@
 </head>
 <body>
 <h1>Stories:</h1><br>
+<a class='ybut2' href='{{url_for('disp_countries')}}'>BACK</a>
 {% for story in stories %}
-<img src='{{story.picture}}'>
+<img src='{{story.picture}}'><br>
 {% endfor %}
 <br><br>
 <form action="{{url_for('add_story', placeId=countryId)}}">

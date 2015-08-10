@@ -15,5 +15,6 @@ font-family: Times;
 }
 a {
 font-size: 250%;
-color: #000000
+color: #000000;
+font-weight: bold;
 }
