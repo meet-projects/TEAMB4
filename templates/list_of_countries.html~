@@ -8,11 +8,9 @@
 </head>
 <body style="text-align:center;">
 <h1> Countries: </h1>
-<ul>
 {% for country in countries %}
-<li><a href="{{url_for('show_country', countryId=country.id)}}">{{country.country}}</a></li>
+<a href="{{url_for('show_country', countryId=country.id)}}">{{country.country}}</a><br>
 {% endfor %}
-</ul>
 <br><br>
 <form action="{{url_for('add_country')}}">
     <input class='ybutton' type="submit" value="Add Country">
