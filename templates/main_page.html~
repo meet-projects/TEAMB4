@@ -2,22 +2,20 @@
 <html>
 <head>
   <title>
-    Title for this Page Goes Here
+    Places
   </title>
-  <link rel=stylesheet type=text/css href="{v">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='front_page_css.css') }}">
 
   
-<h1>Our MEET Y2 project</h1>
-  
+<h1> Seeing countries through its citizens' eyes. </h1>
 </head>
 
 <body>
-
+<div class="center">
 <img src="{{ url_for('static', filename='Screenshot.png') }}" alt="Logo">
+</div>
 
-<p> insert UVP here </p>
-
-<a href="{{url_for('disp_countries')}}">See Countries</a>
+<a href="{{url_for('disp_countries')}}"><h2>See Countries</h2></a>
 </body>
 
 

@@ -2,10 +2,26 @@ h1 {
 font-size: 300%;
 text-align: center;
 font-family: Times New Roman;
-color: #00FFFF;
+color: #000000;
 }
 
 body {
+background-image: url(http://www.pageresource.com/wallpapers/wallpaper/cool-abstract-white-background.jpg);
 background-size: 100%;
 text-align: center;
+}
+
+h2 {
+font-size: 200%;
+text-align: center;
+font-family: Times New Roman;
+
+}
+img {
+width: 70%;
+}
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 50px;
 }
