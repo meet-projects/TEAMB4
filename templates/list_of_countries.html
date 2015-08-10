@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>
+    List of Countries
+  </title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='list_countries_css.css') }}">
+</head>
 <body style="text-align:center;">
 <h1> Countries: </h1>
 {% for country in countries %}
@@ -7,6 +13,8 @@
 {% endfor %}
 
 <br><br>
-<a href="{{url_for('add_country')}}">Add Country</a>
+<form action="{{url_for('add_country')}}">
+    <input class='ybutton' type="submit" value="Add Country">
+</form>
 </body>
 </html>

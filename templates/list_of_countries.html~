@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>
+    List of Countries
+  </title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='list_countries_css.css') }}">
+</head>
 <body style="text-align:center;">
 <h1> Countries: </h1>
 {% for country in countries %}
 <h2><a href="{{url_for('show_country', countryId=country.id)}}">{{country.country}}</a></h2>
 {% endfor %}
+
+<br><br>
+<form action="{{url_for('add_country')}}">
+    <input type="submit" value="Add Country">
+</form>
 </body>
 </html>
