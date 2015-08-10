@@ -43,7 +43,7 @@ def add_country():
 @app.route('/adds/<placeId>', methods=['GET', 'POST'])
 def add_story(placeId):
     if (request.method == 'GET'):
-	return render_template('add_story.html')
+	return render_template('add_story.html', placeId=placeId)
     else:
 	newpicture = request.form['story']
 	newstory = Story(placeId=placeId, picture=newpicture)
