@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>
+    Add Country
+  </title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='add_css.css') }}">
+</head>
 <body>
 <form method='POST'>
-<p>Story picture link:</p>
-<input type='text' name='story'><br>
-<input type='submit' value='Submit'>
+<h1>Story picture link:</h1>
+<input class='ytext' type='text' name='story'><br><br>
+<input class='ybutton' type='submit' value='Submit'>
 </form>
 </body>
 </html>

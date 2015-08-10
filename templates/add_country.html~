@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>
+    Add Country
+  </title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='add_css.css') }}">
+</head>
 <body>
 <form method='POST'>
-<p>Country Name:</p>
-<input type='text' name='country'>
+<h1>Country Name:</h1>
+<input class='yara' type='text' name='country'><br><br>
 <input type='submit' value='Submit'>
 </form>
 </body>
