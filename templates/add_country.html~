@@ -10,9 +10,9 @@
 <form method='POST'>
 <h1>Country Name:</h1>
 <input class='ytext' type='text' name='country'><br><br>
+<a class='ybutton' href="{{url_for('disp_countries')}}">Cancel</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input class='ybutton' type='submit' value='Submit'>
 <div>
-<a href="{{url_for('disp_countries')}}">Cancel</a>
 </div>
 </form>
 </body>

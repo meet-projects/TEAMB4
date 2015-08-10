@@ -10,10 +10,9 @@ background-size: 100%;
 text-align: center
 }
 .ybutton {
-font-size: 150%;
+font-size: 250%;
 font-family: Times;
 }
-a {
-font-size: 250%;
-color: #000000
+img {
+width: 40%;
 }
