@@ -11,6 +11,9 @@
 <h1>Story picture link:</h1>
 <input class='ytext' type='text' name='story'><br><br>
 <input class='ybutton' type='submit' value='Submit'>
+<div>
+<a href="{{url_for('show_country', placeId=countryId)}}">Cancel</a>
+</div>
 </form>
 </body>
 </html>
