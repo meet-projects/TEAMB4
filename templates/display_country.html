@@ -10,7 +10,13 @@
 <h1>Stories:</h1><br>
 <a class='ybut2' href='{{url_for('disp_countries')}}'>BACK</a>
 {% for story in stories %}
+{% if story.picture %}
 <img src='{{story.picture}}'><br>
+{% endif %}
+{% if story.storytext %}
+<h2>{{story.storytext}}</h2>
+{% endif %}
+<h1> ------- </h1>
 {% endfor %}
 <br><br>
 <form action="{{url_for('add_story', placeId=countryId)}}">

@@ -2,19 +2,26 @@
 <html>
 <head>
   <title>
-    Add Country
+    Add Story
   </title>
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='add_css.css') }}">
 </head>
 <body>
 <form method='POST'>
+
 <h1>Story picture link:</h1>
 <input class='ytext' type='text' name='story'><br><br>
+
+<h1>Story text:</h1>
+<input class='ytext' type='text' name='stext'><br><br>
+
+
 <a class='ybutton' href="{{url_for('show_country', countryId=placeId)}}">Cancel</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 <input class='ybutton' type='submit' value='Submit'>
-<div>
-</div>
+
 </form>
+
 </body>
 </html>

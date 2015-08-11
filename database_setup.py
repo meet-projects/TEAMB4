@@ -23,5 +23,6 @@ class Story(Base):
     __tablename__ = 'story' 
     id = Column(Integer, primary_key=True) 
     placeId = Column(Integer) 
-    personId = Column(Integer) 
+    personId = Column(Integer)
+    storytext =  Column(String)
     picture = Column(String)
