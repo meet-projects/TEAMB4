@@ -53,7 +53,6 @@ def add_story(placeId):
 	session.add(newstory)
 	session.commit()
 	return redirect(url_for('show_country', countryId=placeId))
-
 if __name__ == '__main__':
     app.run(debug=True)
 
