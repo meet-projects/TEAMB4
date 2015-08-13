@@ -24,5 +24,5 @@ class Story(Base):
     id = Column(Integer, primary_key=True) 
     placeId = Column(Integer) 
     personId = Column(Integer)
-    text =  Column(String)
+    storytext =  Column(String)
     picture = Column(String)

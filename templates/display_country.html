@@ -13,8 +13,12 @@
 {% if story.picture %}
 <img src='{{story.picture}}'><br>
 {% endif %}
+{% if story.video %}
+<iframe src="{{story.video}}">
+</iframe>
+{% endif %}
 {% if story.storytext %}
-<h2>{{story.storytext}}</h2>
+<h2 style="white-space: pre-wrap;">{{story.storytext}}</h2>
 {% endif %}
 <h1> ------- </h1>
 {% endfor %}

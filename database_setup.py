@@ -26,3 +26,4 @@ class Story(Base):
     personId = Column(Integer)
     storytext =  Column(String)
     picture = Column(String)
+    video = Column(String)

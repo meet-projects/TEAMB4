@@ -16,6 +16,10 @@ font-family: Times;
 img {
 width: 40%;
 }
+iframe { 
+width: 40%;
+height: 300px;
+}
 .ybut2 {
 position: fixed;
 top: 0;

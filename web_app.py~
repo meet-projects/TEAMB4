@@ -46,15 +46,14 @@ def add_story(placeId):
 	return render_template('add_story.html', placeId=placeId)
     else:
 	newpicture = request.form['story']
+	newvideo = request.form['video']
+	newvideo = newvideo.replace("watch?v=", "embed/")
         newtext = request.form['stext']
-	newstory = Story(placeId=placeId, story=newtext, picture=newpicture)
+	newstory = Story(placeId=placeId, video=newvideo, storytext=newtext, picture=newpicture)
 	session.add(newstory)
 	session.commit()
 	return redirect(url_for('show_country', countryId=placeId))
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
 

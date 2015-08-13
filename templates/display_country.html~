@@ -13,6 +13,10 @@
 {% if story.picture %}
 <img src='{{story.picture}}'><br>
 {% endif %}
+{% if story.video %}
+<iframe src="{{story.video}}">
+</iframe>
+{% endif %}
 {% if story.storytext %}
 <h2>{{story.storytext}}</h2>
 {% endif %}
